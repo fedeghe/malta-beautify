@@ -1,0 +1,31 @@
+{
+  "name": "malta-beautify",
+  "version": "0.0.6",
+  "description": "Malta plugin to beautify html, js and css",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://fedeghe@github.com/fedeghe/malta-beautify.git"
+  },
+  "keywords": [
+    "malta",
+    "malta plugin",
+    "malta beautify",
+    "malta beautify html",
+    "malta beautify css",
+    "malta beautify js",
+    "malta beautify plugin"
+  ],
+  "author": "Federico Ghedina <federico.ghedina@gmail.com>",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/fedeghe/malta-beautify/issues"
+  },
+  "dependencies": {
+    "js-beautify": "^1.6.4",
+    "malta": ">=3.0.0"
+  },
+  "main": "./index.js"
+}
