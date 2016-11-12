@@ -27,7 +27,7 @@ function malta_beautify(o, options) {
 			fs.writeFile(o.name, o.content, function(err) {
 				
 				if (err == null) {
-					msg = 'plugin ' + path.basename(__filename) + ' wrote ' + o.name + ' (' + self.getSize(o.name) + ')';
+					msg = 'plugin ' + path.basename(path.dirname(__filename)).white() + ' wrote ' + o.name + ' (' + self.getSize(o.name) + ')';
 				} else {
 					console.log('[ERROR] js-beautify says:');
 					console.dir(err);
