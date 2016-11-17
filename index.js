@@ -1,11 +1,6 @@
 require('malta').checkDeps('js-beautify');
 
 var beautify = require("js-beautify"),
-	// b = {
-	// 	js : beautify,
-	// 	css : beautify.css,
-	// 	html : beautify.html
-	// } 
 	path = require('path'),
 	fs = require('fs');
 
@@ -18,8 +13,10 @@ function malta_beautify(o, options) {
 		ext = o.name.split('.').pop(),
 		proceed = ext in beautify;
 
+	options = options || {};
+
 	if (proceed){
-		o.content = beautify[ext](o.content, options || {});
+		o.content = beautify[ext](o.content, options) + "";
 	}
 
 	return function (solve, reject){
@@ -42,5 +39,5 @@ function malta_beautify(o, options) {
 		}
 	};
 }
-malta_beautify.ext = ['js', 'css', 'html', 'pug', 'md', 'less', 'scss'];
+malta_beautify.ext = ['js', 'css', 'html', 'pug', 'md', 'less', 'scss', 'ts', 'coffee'];
 module.exports = malta_beautify;
