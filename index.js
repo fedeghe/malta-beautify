@@ -12,27 +12,22 @@ function malta_beautify(o, options) {
 		msg,
 		ext = o.name.split('.').pop(),
 		proceed = ext in beautify,
-		pluginName = path.basename(path.dirname(__filename)),
-		doErr = function (e) {
-			console.log(('[ERROR on ' + o.name + ' using ' + pluginName + '] :').red());
-			console.dir(e);
-			self.stop();
-		};
+		pluginName = path.basename(path.dirname(__filename));
 
 	options = options || {};
 
 	if (proceed){
 		try {
 			o.content = beautify[ext](o.content, options) + "";
-		} catch(err) {
-			doErr(err);
+		} catch (err) {
+			self.doErr(err, o, pluginName);
 		}
 	}
 
 	return function (solve, reject){
 		if (proceed) {
 			fs.writeFile(o.name, o.content, function(err) {
-				err && doErr(err);
+				err && self.doErr(err, o, pluginName);
 				msg = 'plugin ' + pluginName.white() + ' wrote ' + o.name + ' (' + self.getSize(o.name) + ')';
 				solve(o);
 				self.notifyAndUnlock(start, msg);
