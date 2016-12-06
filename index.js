@@ -38,5 +38,5 @@ function malta_beautify(o, options) {
 		}
 	};
 }
-malta_beautify.ext = ['js', 'css', 'html', 'pug', 'md', 'less', 'scss', 'ts', 'coffee'];
+malta_beautify.ext = ['js', 'css', 'html', 'pug', 'md', 'less', 'scss', 'ts', 'coffee', 'haml'];
 module.exports = malta_beautify;
