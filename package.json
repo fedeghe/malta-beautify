@@ -25,7 +25,7 @@
   },
   "dependencies": {
     "js-beautify": "^1.6.4",
-    "malta": ">=3.0.0"
+    "malta": ">=3.4.0"
   },
   "main": "./index.js"
 }
