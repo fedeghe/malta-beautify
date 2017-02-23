@@ -1,6 +1,6 @@
 {
   "name": "malta-beautify",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Malta plugin to beautify html, js and css",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -19,7 +19,7 @@
     "malta beautify plugin"
   ],
   "author": "Federico Ghedina <federico.ghedina@gmail.com>",
-  "license": "UNLICENSED",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/fedeghe/malta-beautify/issues"
   },
