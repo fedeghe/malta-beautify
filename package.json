@@ -24,8 +24,8 @@
     "url": "https://github.com/fedeghe/malta-beautify/issues"
   },
   "dependencies": {
-    "js-beautify": "^1.6.4",
-    "malta": ">=3.8.3"
+    "js-beautify": "^1.8.8",
+    "malta": ">=3.8.14"
   },
   "main": "./index.js"
 }
