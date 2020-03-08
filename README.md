@@ -1,6 +1,5 @@
 ---
 [![npm version](https://badge.fury.io/js/malta-beautify.svg)](http://badge.fury.io/js/malta-beautify)
-[![Dependencies](https://david-dm.org/fedeghe/malta-beautify.svg)](https://david-dm.org/fedeghe/malta-beautify)
 [![npm downloads](https://img.shields.io/npm/dt/malta-beautify.svg)](https://npmjs.org/package/malta-beautify)
 [![npm downloads](https://img.shields.io/npm/dm/malta-beautify.svg)](https://npmjs.org/package/malta-beautify)  
 ---  

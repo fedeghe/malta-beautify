@@ -1,26 +1,24 @@
-require('malta').checkDeps('js-beautify');
-
-var beautify = require("js-beautify"),
+const beautify = require("js-beautify"),
     path = require('path'),
     fs = require('fs');
 
 function malta_beautify(o, options) {
-
-    var self = this,
-        name = o.name,
+    
+    const self = this,
         start = new Date(),
-        msg,
         ext = o.name.split('.').pop(),
         proceed = ext in beautify,
         pluginName = path.basename(path.dirname(__filename));
+        
+    let msg;
 
     options = options || {};
 
-    return function (solve, reject) {
+    return (solve, reject) => {
         if (proceed) {
             try {
                 o.content = beautify[ext](o.content, options) + "";
-                fs.writeFile(o.name, o.content, function (err) {
+                fs.writeFile(o.name, o.content, err => {
                     if (err) {
                         self.doErr(err, o, pluginName);
                     }
